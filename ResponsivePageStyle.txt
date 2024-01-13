@@ -1,0 +1,17 @@
+Page Heade
+
+
+
+
+// create a component
+var heightY = Dimensions.get('window').height;
+var textFontSize = heightY * 0.015;
+const flexD = 'column';
+const {width, height} = Dimensions.get('window');
+
+  box: {
+    backgroundColor: '#fff',
+    width: width / 2 - 5,
+    height: height / 8 - 10,
+    marginLeft: '1%',
+  },

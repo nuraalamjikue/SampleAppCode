@@ -1,0 +1,22 @@
+instance
+  .get(
+    `/Op_Production_Calc/getPartName/${getBuyerName}/${getstyleNo}/${getSeasonName}/${getLineName}/${employeeID}`,
+  )
+  .then(response => {
+    console.log('data', JSON.stringify(response.data));
+
+    const totalPartEntry = response.data.reduce((acc, item) => {
+      // Check if TotalPartEntry is greater than 0 before adding to the accumulator
+      if (item.TotalPartEntry > 0) {
+        return acc + item.TotalPartEntry;
+      }
+      return acc;
+    }, 0);
+
+    console.log('TotalPartEntry:', totalPartEntry);
+
+    // Now you can use totalPartEntry as needed
+  })
+  .catch(e => {
+    console.log(e);
+  });

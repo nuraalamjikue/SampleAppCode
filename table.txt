@@ -1,0 +1,67 @@
+
+import React, {Component} from 'react';
+import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
+import {
+  Table,
+  TableWrapper,
+  Row,
+  Cell,
+  Cols,
+} from 'react-native-table-component';
+
+const App = () => {
+  const tableHead = [
+    'Sl',
+    'Size',
+    'Panel Name',
+    'Panel Weight Without Down',
+    'Panel Weight Without Down',
+  ];
+
+  const tableData = [
+    ['1', '2', '3', '4', '5'],
+    ['a', 'b', 'c', 'd', 'e'],
+    ['1', '2', '3', '4', '5'],
+    ['a', 'b', 'c', 'd', 'e'],
+  ];
+
+  const element = (data, index) => (
+    <TouchableOpacity onPress={() => console.log(index + 1)}>
+      <View style={styles.btn}>
+        <Text style={styles.btnText}>Button</Text>
+      </View>
+    </TouchableOpacity>
+  );
+
+  return (
+    <View style={styles.container}>
+      <Table borderStyle={{borderWidth: 1, borderColor: '#C1C0B9'}}>
+        <Row data={tableHead} style={styles.head} textStyle={styles.text} />
+        {tableData.map((rowData, index) => (
+          <TableWrapper key={index} style={styles.row}>
+            {rowData.map((cellData, cellIndex) => (
+              <Cell
+                style={[styles.rows, index % 2 && {backgroundColor: '#F7F6E7'}]}
+                key={cellIndex}
+                data={cellIndex === 4 ? element(cellData, index) : cellData}
+                textStyle={styles.text}
+              />
+            ))}
+          </TableWrapper>
+        ))}
+      </Table>
+    </View>
+  );
+};
+
+const styles = StyleSheet.create({
+  container: {flex: 1, padding: 16, paddingTop: 30, backgroundColor: '#fff'},
+  head: {height: 40, backgroundColor: '#808B97'},
+  text: {margin: 6, fontSize: 9},
+  row: {flexDirection: 'row', backgroundColor: '#E7E6E1'},
+  btn: {width: 58, height: 18, backgroundColor: '#78B7BB', borderRadius: 2},
+  btnText: {textAlign: 'center', color: '#fff'},
+  rows: {height: '40', width: '20%', backgroundColor: '#E7E6E1'},
+});
+
+export default App;

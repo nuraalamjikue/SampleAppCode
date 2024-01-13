@@ -1,0 +1,21 @@
+1.react-native-async-storage/async-storage
+2.reduxjs/toolkit
+3.react-redux
+4.redux
+5.redux-logger
+6.redux-persist
+
+
+
+
+{/* <SafeAreaProvider>
+<PaperProvider theme={theme}>
+  <Provider store={store}>
+    <PersistGate loading={null} persistor={persistor}>
+      <NavigationContainer ref={nav}>
+        <MainStack token={token} />
+      </NavigationContainer>
+    </PersistGate>
+  </Provider>
+</PaperProvider>
+</SafeAreaProvider> */}

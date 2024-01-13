@@ -1,0 +1,51 @@
+
+gradlew Update
+
+1.PS C:\Users\Jikue\AwesomeProject\android> ./gradlew build --warning-mode all
+
+***********************************************
+1
+2.npm Start
+3.npx Start
+4
+5.npm start --reset-cache
+
+
+********************Help***********************
+1. cd .\android\
+2. cls
+3. ./gradlew clean
+4. cd .. && rm -rf node_modules
+5. rm -rf node_modules && npm install
+6.npm set strict-ssl false
+
+********************App Build**********************
+
+1../gradlew bundleRelease
+2../gradlew assembleRelease
+3. cd android
+
+*********************Code Ref*******************
+1.How to Create a Custom Drawer Navigation in React Native | Expo ( react-navigation V6 ) (Youtube)
+
+*********************App Name Change************************
+
+https://stackoverflow.com/questions/34794679/change-app-name-in-react-native
+
+*********************App Logo Change************************
+https://easyappicon.com/
+
+****************************** Network request failed********************************
+How to solve 'TypeError: Network request failed' in React Native?
+
+1.android/app/src/main/AndroidManifest.xml
+2.android:usesCleartextTraffic="true"
+
+
+*****************************Jeson Formetor In C# ***************************************
+https://json2csharp.com/
+
+*****************************App Version*************************************************
+android/app/build.gradle
+
+

@@ -1,0 +1,31 @@
+Change the name at \android\app\src\main\res\values\strings.xml,  
+app.jon, and ./android/app/src/main/java/MainActivity.java
+
+    **strings.xml**
+    <resources>
+        <string name="app_name">NewAppName</string>
+    </resources>
+    
+    **app.json**
+    {
+      "name": "NewAppName",
+      "displayName": "NewAppName"
+    }
+    
+    **MainActivity.java**
+      @Override
+      protected String getMainComponentName() {
+        return "NewAppName";
+      }
+
+Then run these commands on terminal
+
+
+    cd android  
+    ./gradlew clean   
+    cd ..  
+    npx react-native run-android
+
+----------------------------------------------------------------------------------------------------------------------------
+*********************App Logo Change************************
+https://easyappicon.com/

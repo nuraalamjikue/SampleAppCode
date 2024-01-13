@@ -1,0 +1,22 @@
+instance
+  .get(
+    `/Op_Production_Calc/getPartName/${getBuyerName}/${getstyleNo}/${getSeasonName}/${getLineName}/${employeeID}`,
+  )
+  .then(response => {
+
+  const filteredData = response.data.filter(
+          item => item.TotalPartEntry > 0,
+        );
+
+        // Calculate total SMV for the filtered items
+        const totalworkpart = filteredData.length;
+
+        setTotalpartDone(totalworkpart);
+
+    console.log('TotalPartEntry:', totalworkpart);
+
+    // Now you can use totalPartEntry as needed
+  })
+  .catch(e => {
+    console.log(e);
+  });
